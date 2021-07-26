@@ -4,6 +4,7 @@ import { Button, Container, Content, UserIcon, Input, InputDiv,
 import {api} from '../../services/index'
 import {addToastError} from '../../hooks/toast'
 import { useHistory } from "react-router-dom";
+import {isAuthenticated} from '../../auth'
 
 
 
@@ -21,7 +22,7 @@ export function Login(){
                 "password": password,
                 "persistentLogin": true
             })
-            localStorage.setItem('#DvxUpdateData:token', response.data.data.access_token )
+            localStorage.setItem('@DvxUpdateData:token', response.data.data.access_token )
             history.push('/')
         } catch {
             addToastError('Falha na autenticação.\nUsuário ou senha incorreta.');

@@ -6,9 +6,9 @@ import ReactNotification from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css'
 
 ReactDOM.render(
-    <BrowserRouter>
+    <>
       <App />
       <ReactNotification />
-    </BrowserRouter>,
+    </>,
   document.getElementById('root')
 );
