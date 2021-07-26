@@ -19,7 +19,7 @@ export function Main(){
                         </CardDescription>
                     </CardContent>
                 </Cards>
-                <Cards>
+                <Cards href="/UpdateCpf">
                     <CardContent>
                         <CardTitle>
                             <PersonIcon size={110} />
