@@ -1,7 +1,6 @@
 import { Container, Content, PoweroffIcon } from "./styles";
-import logoImg from '../../assets/logo_antiga.png'
+import logoImg from '../../assets/logo_dvx_update.png'
 import { useHistory } from "react-router-dom";
-import {isAuthenticated} from '../../auth'
 
 export function Header(){
     const history = useHistory()
@@ -17,6 +16,7 @@ export function Header(){
                 <div>
                     <a href="/">
                         <img src={logoImg} alt="Logo" />
+                        <p>DVX Updated Base</p>
                     </a>
                 </div>
                 <div className="iconClass">

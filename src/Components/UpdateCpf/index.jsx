@@ -1,5 +1,4 @@
 import {Container, Content, Input, Button, ProgressComponent, ContentProgress} from './styles'
-import { Progress } from 'reactstrap';
 
 export function UpdateCpf(){
     return(

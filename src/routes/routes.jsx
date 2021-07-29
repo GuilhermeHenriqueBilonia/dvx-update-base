@@ -4,7 +4,6 @@ import {
     Route,
     BrowserRouter
 } from "react-router-dom";
-import { Header } from "../Components/Header";
 import { Main } from "../Components/Main";
 import { UpdateCnpj } from "../Components/UpdateCnpj";
 import { UpdateCpf } from "../Components/UpdateCpf";

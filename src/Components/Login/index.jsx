@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Button, Container, Content, UserIcon, Input, InputDiv, 
     PasswordIcon, LoaderIcon } from "./styles";
-import {api} from '../../services/index'
+import {auth} from '../../services/index'
 import {addToastError} from '../../hooks/toast'
 import { useHistory } from "react-router-dom";
-import {isAuthenticated} from '../../auth'
 
 
 
@@ -17,7 +16,7 @@ export function Login(){
     async function handleLogin(){
         setIsClicked(true)
         try {
-            const response = await api.post('/Account/Login', {
+            const response = await auth.post('/Account/Login', {
                 "userName": user,
                 "password": password,
                 "persistentLogin": true
