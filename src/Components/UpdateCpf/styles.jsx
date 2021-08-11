@@ -1,5 +1,7 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Progress } from 'reactstrap';
+import {Loader3} from '@styled-icons/remix-fill/Loader3'
+
 
 export const Container = styled.div`
     width: 100%;
@@ -61,13 +63,36 @@ export const Button = styled.button`
 `
 
 export const ContentProgress = styled.div`
-    width: 100%;
-    border: 2px solid rgb(41, 41, 46);
-    margin-top: 1.5rem;
-    border-radius: 0.5rem;
+width: 100%;
+border: 2px solid rgb(41, 41, 46);
+margin-top: 1.5rem;
+border-radius: 0.5rem;
+text-align: center;
 `
 
 export const ProgressComponent = styled(Progress)`
-    background-color: var(--green);
-    border-radius: 0.5rem;
+background-color: var(--green);
+border-radius: 0.5rem;
+text-align: center;
+`
+
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`
+
+
+export const LoaderIcon = styled(Loader3)`
+  animation: ${rotate} 2s linear infinite;
+  
+
+  path {
+    color: #FFFFFF;
+  }
 `

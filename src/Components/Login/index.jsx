@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Container, Content, UserIcon, Input, InputDiv, 
     PasswordIcon, LoaderIcon } from "./styles";
-import {auth} from '../../services/index'
+import {api} from '../../services/index'
 import {addToastError} from '../../hooks/toast'
 import { useHistory } from "react-router-dom";
 
@@ -16,12 +16,11 @@ export function Login(){
     async function handleLogin(){
         setIsClicked(true)
         try {
-            const response = await auth.post('/Account/Login', {
-                "userName": user,
-                "password": password,
-                "persistentLogin": true
+            const response = await api.post('/Auth', {
+                "email": user,
+                "password": password
             })
-            localStorage.setItem('@DvxUpdateData:token', response.data.data.access_token )
+            localStorage.setItem('@DvxUpdateData:token', response.data.data )
             history.push('/')
         } catch {
             addToastError('Falha na autenticação.\nUsuário ou senha incorreta.');

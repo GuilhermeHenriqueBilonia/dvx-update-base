@@ -23,15 +23,18 @@ export const Content = styled.div`
 
 export const Input = styled.input`
     border: 0;
-    padding: 0.8rem;
+    padding: 0.9rem;
     font-size: 1rem;
     width: 90%;
     height: 3rem;
     font-weight: 500;
     background-color: var(--input-background);
+    -webkit-autofill: var(--input-background);
     &:focus{
         outline: none;
     }
+
+}
 `
 
 export const InputDiv = styled.div`
