@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { api } from "../../services";
 
 import {ProgressComponent, ContentProgress} from './styles'
@@ -16,6 +16,12 @@ export function ProgressBar({processing}){
                 })
         }, 300)
     )*/
+
+    useEffect(() => {
+        if(processing){
+            
+        }
+    },[])
 
 
     return(
